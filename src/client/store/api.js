@@ -5,7 +5,4 @@ const getMessagesUrl = `${baseUrl}/messages`;
 const addNewMessageUrl = `${baseUrl}/message/new`;
 
 export const getMessages = () => axios.get(getMessagesUrl);
-export const addMessage = (msg) => {
-  debugger;
-  return axios.post(addNewMessageUrl, {message: msg})
-};
+export const addMessage = (msg) => axios.post(addNewMessageUrl, {message: msg});

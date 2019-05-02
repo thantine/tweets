@@ -17,7 +17,7 @@ app.get("/api/messages", async (_, res) => {
   const db = await connectDB();
   const messages = await db.collection(config.collectionName)
     .find({})
-    .sort({ createdAt: -1 })
+    .sort({ createdAt: -1, part: 1 })
     .toArray();
 
   res.status(200).json(messages);

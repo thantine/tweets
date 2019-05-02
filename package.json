@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack -d",
+    "test": "jest --watch",
+    "start": "concurrently \"babel-node src/server/server\" \"webpack-dev-server --open\"",
     "dev": "webpack-dev-server --open",
     "server": "babel-node src/server/server"
   },
@@ -20,7 +20,9 @@
     "@babel/preset-react": "^7.0.0",
     "@babel/register": "^7.0.0",
     "babel-loader": "^8.0.2",
+    "concurrently": "^4.1.0",
     "css-loader": "^2.1.1",
+    "jest": "^24.7.1",
     "style-loader": "^0.23.1",
     "webpack": "^4.17.2",
     "webpack-cli": "^3.1.2",
@@ -36,6 +38,7 @@
     "mongodb": "^3.2.3",
     "react": "^16.4.2",
     "react-dom": "^16.5.0",
+    "react-loader-spinner": "^2.3.0",
     "react-redux": "^5.0.7",
     "redux": "^4.0.0",
     "redux-observable": "^1.1.0",

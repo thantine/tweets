@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import Loader from "react-loader-spinner";
 
 import { fetchMessages } from "../store/actions";
 import Message from "./Message";
@@ -13,17 +14,30 @@ class MessageList extends React.PureComponent {
   }
 
   render() {
-    const { messages } = this.props;
+    const { messages, loading } = this.props;
+    const spinner = loading ? (<Loader
+      type="ThreeDots"
+      color="#00BFFF"
+      height="50"	
+      width="50"
+    />) : null;
+
     return (
-      <ul className="list-group" style={style}>
-        {messages.map(msg => <Message key={getKey(msg)} content={msg.content} createdAt={msg.createdAt} />)}
-      </ul>
+      <div style={style}>
+        {spinner}
+        <ul className="list-group">
+          {messages.map(
+            msg =><Message key={getKey(msg)} content={msg.content} createdAt={msg.createdAt} />
+          )}
+        </ul>
+      </div>
     );
   }
 }
 
 const mapStateToProps = state => ({
-  messages: state.messages
+  messages: state.messages,
+  loading: state.loading
 });
 
 const mapDispatchToProps = dispatch => ({
