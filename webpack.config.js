@@ -5,8 +5,8 @@ module.exports = {
   entry: path.resolve(__dirname, "src", "client"),
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: 'bundle.js',
-    publicPath: '/'
+    filename: "bundle.js",
+    publicPath: "/"
   },
   resolve: {
     extensions: [".js", ".jsx"]
@@ -21,7 +21,7 @@ module.exports = {
       query: { compact: false }
     }, {
       test: /\.css$/,
-      use: ['style-loader', 'css-loader'],
+      use: ["style-loader", "css-loader"],
     }]
   }
-}
+};

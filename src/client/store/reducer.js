@@ -35,16 +35,16 @@ export default (state = initialState, action) => {
         ...state,
         loading: false,
         messages: action.payload
-      }
+      };
     
     case ADD_MESSAGE_SUCCESS:
       return {
         ...state,
         loading: false,
         messages: [...action.payload, ...state.messages]
-      }
+      };
 
     default:
       return state;
   }
-}
+};

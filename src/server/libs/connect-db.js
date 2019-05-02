@@ -5,7 +5,7 @@ import config from "../config";
 let db = null;
 
 export const connectDB = async () => {
-  if (db) return db;
+  if (db) { return db; };
 
   try {
     const client = await MongoClient.connect(config.connectionString, {
@@ -18,4 +18,4 @@ export const connectDB = async () => {
   catch (err) {
     console.error(err);
   }
-}
+};

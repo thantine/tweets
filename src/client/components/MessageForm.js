@@ -11,7 +11,7 @@ class MessageForm extends React.PureComponent {
     evt.preventDefault();
     const messageText = this.messageInput.value;
 
-    if (!messageText) return;
+    if (!messageText) { return; }
 
     this.props.addMessage(splitMessage(messageText));
   }
@@ -39,6 +39,6 @@ class MessageForm extends React.PureComponent {
 
 const mapDispatchToProps = dispatch => ({
   addMessage: msgParts => dispatch(addMessage(msgParts))
-})
+});
 
 export default connect(null, mapDispatchToProps)(MessageForm);

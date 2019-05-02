@@ -2,7 +2,7 @@ import uuid from "uuid";
 
 import { combineEpics } from "redux-observable";
 
-import { fromPromise } from 'rxjs/observable/fromPromise';
+import { fromPromise } from "rxjs/observable/fromPromise";
 import { mergeMap, map, catchError } from "rxjs/operators";
 import { forkJoin, of } from "rxjs";
 

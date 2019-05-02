@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 import store from "./store";
 
@@ -13,7 +13,7 @@ const style = {
   width: "500px",
   margin: "auto",
   padding: "20px 10px"
-}
+};
 
 ReactDOM.render(
   <Provider store={store}>

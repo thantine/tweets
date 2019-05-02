@@ -8,7 +8,7 @@ const mockMessageParts = [
   "1/3 I can't seem to figure out why when I'm doing",
   "2/3 an axios.post method providing a body of data,",
   "3/3 it gets captured as undefined on my server."
-]
+];
 
 describe("Split message", () => {
   it("should create the correct regex", () => {
