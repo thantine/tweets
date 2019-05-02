@@ -1,13 +1,11 @@
 import splitMessage, { createRegex, pad } from "../split-message";
 
-const mockMessage = "I can't seem to figure out why when I'm doing an axios.post method providing a body of data, it gets captured as undefined on my server.";
+const mockMessage = "I can't believe Tweeter now supports chunking my messages, so I don't have to do it myself.";
 const mockRegex = /(\b.{1,46}(\s|$))\s*/g;
-const mockPad = "005";
 const mockMaxPartLen = 50;
 const mockMessageParts = [
-  "1/3 I can't seem to figure out why when I'm doing",
-  "2/3 an axios.post method providing a body of data,",
-  "3/3 it gets captured as undefined on my server."
+  "1/2 I can't believe Tweeter now supports chunking",
+  "2/2 my messages, so I don't have to do it myself."
 ];
 
 describe("Split message", () => {
@@ -18,7 +16,7 @@ describe("Split message", () => {
 
   it("should pad number correctly", () => {
     const padStr = pad(5, 3);
-    expect(padStr).toBe(mockPad);
+    expect(padStr).toBe("005");
   });
 
   it("should split message correctly", () => {

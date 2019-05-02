@@ -1,6 +1,6 @@
 # Tweets
 
-This is an exercise of Zalora
+This is an exercise
 
 # Technologies
 - Express, MongoDB
