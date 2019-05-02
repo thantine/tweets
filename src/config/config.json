@@ -1,0 +1,5 @@
+{
+  "connectionString": "mongodb+srv://thantine:Aa123456@cluster0-gk7nz.mongodb.net/test?retryWrites=true",
+  "dbName": "tweetsdb",
+  "collectionName": "tweets"
+}

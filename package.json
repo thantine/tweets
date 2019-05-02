@@ -4,10 +4,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack",
+    "start": "webpack -d",
     "dev": "webpack-dev-server --open",
-    "server": "babel-node src/server/server",
-    "server-test": "babel-node src/server/server.spec"
+    "server": "babel-node src/server/server"
   },
   "author": "",
   "license": "ISC",
@@ -16,6 +15,7 @@
   "devDependencies": {
     "@babel/core": "^7.0.0",
     "@babel/node": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
     "@babel/register": "^7.0.0",
@@ -27,6 +27,7 @@
     "webpack-dev-server": "^3.1.7"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "body-parser": "^1.19.0",
     "bootstrap": "^4.3.1",
     "cors": "^2.8.5",
@@ -39,6 +40,7 @@
     "redux": "^4.0.0",
     "redux-observable": "^1.1.0",
     "rxjs": "^6.5.1",
+    "rxjs-compat": "^6.5.1",
     "uuid": "^3.3.2"
   }
 }
